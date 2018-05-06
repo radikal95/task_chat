@@ -5,7 +5,7 @@ from flask import Flask, render_template
 from flask_socketio import SocketIO, send
 
 app = Flask(__name__)
-app.config.from_object('config_flask.ProductionConfig')
+app.config.from_object('config.ProductionConfig')
 socketio = SocketIO(app)
 
 @app.route('/')
