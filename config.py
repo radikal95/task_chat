@@ -1,5 +1,3 @@
-__author__ = 'alex87e'
-from datetime import timedelta
 
 
 class SandboxConfig(object):
