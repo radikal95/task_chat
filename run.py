@@ -6,9 +6,6 @@ from os import path
 from models import Member, Task
 from utils import FlashUtils, UploadUtils, PasswordUtils, send_email, DbQuery
 import time
-from flask_socketio import join_room, leave_room,send,emit
-
-from flask_socketio import SocketIO
 
 
 
