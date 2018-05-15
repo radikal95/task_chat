@@ -18,10 +18,9 @@ login_manager.login_message = u"Пожалуйста, авторизуйтесь
 login_manager.login_message_category = "info"
 
 app = Flask(__name__)
-socketio = SocketIO(app)
 login_manager.init_app(app)
-# app.config.from_object('config.ProductionConfig') #uncommentfor production
-app.config.from_object('config.SandboxConfig')
+app.config.from_object('config.ProductionConfig') #uncommentfor production
+# app.config.from_object('config.SandboxConfig')
 
 db_query = DbQuery()
 
@@ -148,5 +147,4 @@ def check():
 
 
 if __name__ == '__main__':
-    socketio.run(app)
     app.run(debug=True)
