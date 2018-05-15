@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search...</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+</head>
+<body onload="time()">
+<script>
+        function time() {
+            $.ajax({
+                type: "POST",
+                url: "/time",
+                data: $('form').serialize(),
+                type: 'POST',
+                success:
+                    function printNumbersInterval(response) {
+                        var i = 1;
+                        var timerId = setInterval(function(json) {
+                        $.ajax({
+                            type: "POST",
+                            url: "/search_member",
+                            data: $('form').serialize(),
+                            type: 'POST',
+                            success: function(response) {
+                            var json = jQuery.parseJSON(response);
+                            var result = json.result;
+                            $('#result').html(result);
+                            console.log(response);},
+                            error: function(error) {
+                            console.log(error);
+                            }
+                        });
+                        console.log(i);
+                        i++;}, 1000);
+                    },
+                error: function(error) {
+                    console.log(error);
+                }
+            });
+        }
+
+
+</script>
+<div id = 'result'></div>
+</body>
+</html>

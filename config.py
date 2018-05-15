@@ -4,9 +4,9 @@ class SandboxConfig(object):
     SECRET_KEY = 'B43EA47481FD02AD6131D24BF494DCCF358A349C403F2F39C0E141D596E9FEBC'  # SHA256 АсенийЛевАлексей
     DEBUG = True
     HOST = 'localhost'
-    DATABASE_URL = 'business_diving'
-    USERNAME = 'postgres'
-    PASSWORD = 'postgres'
+    DATABASE_URL = 'task_chat'
+    USERNAME = 'app_user'
+    PASSWORD = 'radikal'
     # UPLOAD_FOLDER = '/uploads'
     # ALLOWED_EXTENSIONS = set(['pdf', 'ppt', 'pptx', 'xls', 'xlsx', 'doc', 'docx'])
     # REMEMBER_COOKIE_DURATION = timedelta(days=4)  # days
@@ -27,9 +27,12 @@ class ProductionConfig(object):
     SECRET_KEY = 'B43EA47481FD02AD6131D24BF494DCCF358A349C403F2F39C0E141D596E9FEBC'  # SHA256 АсенийЛевАлексей
     DEBUG = False
     HOST = 'localhost'
-    DATABASE_URL = 'business_diving'
-    USERNAME = 'app_user'
-    PASSWORD = 'qwerty_123'
+    # DATABASE_URL = 'russia_help'
+    DATABASE_URL = 'root'
+    # USERNAME = 'app_user'
+    USERNAME = 'root'
+    # PASSWORD = 'radikal'
+    PASSWORD = ''
     # UPLOAD_FOLDER = '/uploads'
     # ALLOWED_EXTENSIONS = set(['pdf', 'ppt', 'pptx', 'xls', 'xlsx', 'doc', 'docx'])
     # REMEMBER_COOKIE_DURATION = timedelta(days=4)  # days
